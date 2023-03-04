@@ -1,9 +1,10 @@
+require('dotenv').config();
 const puppeteer = require('puppeteer');
 const { ask } = require('./utils/utils');
 const { exit } = require('process');
 const location = {
-  district: 'Braga',
-  city: 'Vila Verde',
+  district: process.env.DISTRICT,
+  city: process.env.CITY,
 };
 const URL = 'https://www.ipma.pt/pt/otempo/prev.localidade.hora/';
 const DEBUG_MODE = true;
