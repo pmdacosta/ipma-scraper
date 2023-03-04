@@ -1,15 +1,10 @@
 const puppeteer = require('puppeteer');
-// const fs = require('fs');
-// const util = require('util');
-const { ask, wait } = require('./utils/utils');
+const { ask } = require('./utils/utils');
 const { exit } = require('process');
 const location = {
   district: 'Braga',
   city: 'Vila Verde',
 };
-const districtURI = encodeURIComponent(location.district);
-const cityURI = encodeURIComponent(location.city);
-// const URL = `https://www.ipma.pt/pt/otempo/prev.localidade.hora/#${districtURI}&${cityURI}`;
 const URL = 'https://www.ipma.pt/pt/otempo/prev.localidade.hora/';
 const DEBUG_MODE = true;
 
